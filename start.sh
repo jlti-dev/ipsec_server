@@ -100,4 +100,4 @@ iptables --table nat --insert POSTROUTING --source $pubip --jump SNAT --to-sourc
 echo "Finished Natting"
 
 echo "Finished Startup - Starting charon now!"
-/usr/libexec/ipsec/charon --debug-ike 0 --debug-cfg 1 --debug-mgr 1 --debug-enc 0 --debug-net 0 --debug-chd 1
+exec /usr/libexec/ipsec/charon --debug-ike 0 --debug-cfg 1 --debug-mgr 1 --debug-enc 0 --debug-net 0 --debug-chd 1
